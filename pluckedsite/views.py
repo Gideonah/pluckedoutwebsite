@@ -7,4 +7,7 @@ def index(request):
 
 	return render(request, 'pluckedsite/index.html')
 	
-	
+def construction_view(request):
+
+
+	return render(request, 'pluckedsite/construction.html')

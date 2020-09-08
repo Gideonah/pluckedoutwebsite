@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path
 
 from pluckedsite import views as pluckedsite_views
-from studies import views as studies_views
-from meeting import views as meeting_views
+from studies import views as study_view
+
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -26,6 +26,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', pluckedsite_views.index, name='index'),
-    path('studies/', studies_views.study_view, name='studies'),
-    path('meeting/', meeting_views.meeting_view, name='meeting'),
+    path('prayer/', study_view.prayer_view, name='prayer'),
+    path('meeting/', study_view.meeting_view, name='meeting'),
+    path('statement/', study_view.statement_view, name='statement'),
+    path('construction/', pluckedsite_views.construction_view, name='construction'),
 ]
