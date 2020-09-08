@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'vj*1m$c@@*7l1+*v6n2k8oqb2nzao$_wqvb-c)(kq7rzpmko1v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['pluckedout.pythonanywhere.com','www.pluckedout.co.uk']
 
 
 # Application definition
@@ -124,5 +124,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/home/pluckedout/pluckedoutwebsite/static'
 
 
