@@ -14,3 +14,11 @@ def meeting_view(request):
 def statement_view(request):
 
 	return render(request, 'studies/statement.html')
+
+def resources_view(request):
+
+	return render(request, 'studies/resources.html')
+
+def trinity_view(request):
+
+	return render(request, 'studies/trinity.html')
