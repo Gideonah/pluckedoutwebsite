@@ -22,3 +22,11 @@ def resources_view(request):
 def trinity_view(request):
 
 	return render(request, 'studies/trinity.html')
+
+def hellfire_view(request):
+
+	return render(request, 'studies/hellfire.html')
+
+def sod_view(request):
+
+	return render(request, 'studies/stateofthedead.html')
