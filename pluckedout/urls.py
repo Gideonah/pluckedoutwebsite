@@ -30,6 +30,7 @@ urlpatterns = [
     path('meeting/', study_view.meeting_view, name='meeting'),
     path('hellfire/', study_view.hellfire_view, name='hellfire'),
     path('stateofthedead/', study_view.sod_view, name='stateofthedead'),
+    path('israel/', study_view.israel_view, name='israel'),
     path('statement/', study_view.statement_view, name='statement'),
     path('resources/', study_view.resources_view, name='resources'),
     path('trinity/', study_view.trinity_view, name='trinity'),

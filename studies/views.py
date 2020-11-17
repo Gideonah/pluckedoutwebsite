@@ -30,3 +30,7 @@ def hellfire_view(request):
 def sod_view(request):
 
 	return render(request, 'studies/stateofthedead.html')
+
+def israel_view(request):
+
+	return render(request, 'studies/israel.html')
