@@ -33,6 +33,7 @@ urlpatterns = [
     path('israel/', study_view.israel_view, name='israel'),
     path('statement/', study_view.statement_view, name='statement'),
     path('resources/', study_view.resources_view, name='resources'),
+    path('biblestudy/', study_view.ldstudies_view, name='ldstudies'),
     path('trinity/', study_view.trinity_view, name='trinity'),
     path('construction/', pluckedsite_views.construction_view, name='construction'),
 ]

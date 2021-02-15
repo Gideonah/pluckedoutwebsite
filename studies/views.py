@@ -34,3 +34,7 @@ def sod_view(request):
 def israel_view(request):
 
 	return render(request, 'studies/israel.html')
+
+def ldstudies_view(request):
+
+	return render(request, 'studies/biblestudy.html')
