@@ -38,3 +38,7 @@ def israel_view(request):
 def ldstudies_view(request):
 
 	return render(request, 'studies/biblestudy.html')
+
+def sbholy_view(request):
+
+	return render(request, 'studies/sabbathholy.html')
