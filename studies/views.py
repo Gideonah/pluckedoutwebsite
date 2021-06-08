@@ -42,3 +42,7 @@ def ldstudies_view(request):
 def sbholy_view(request):
 
 	return render(request, 'studies/sabbathholy.html')
+
+def alone_view(request):
+
+	return render(request, 'studies/alone.html')
