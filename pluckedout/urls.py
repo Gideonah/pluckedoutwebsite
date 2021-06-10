@@ -37,5 +37,7 @@ urlpatterns = [
     path('trinity/', study_view.trinity_view, name='trinity'),
     path('keepingsabbath/', study_view.sbholy_view, name='keepingsabbath'),
     path('alone/', study_view.alone_view, name='alone'),
-    path('construction/', pluckedsite_views.construction_view, name='construction'),
+    path('dreamofaking/', study_view.prophecy_daniel2_view, name='dreamofaking'),
+    path('tracts/', pluckedsite_views.tracts_view, name='tracts'),
+    path('antichrist/', pluckedsite_views.antichrist_view, name='antichrist'),
 ]

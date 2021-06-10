@@ -7,7 +7,13 @@ def index(request):
 
 	return render(request, 'pluckedsite/index.html')
 	
-def construction_view(request):
+def antichrist_view(request):
 
 
-	return render(request, 'pluckedsite/construction.html')
+	return render(request, 'pluckedsite/antichrist.html')
+
+
+def tracts_view(request):
+
+
+	return render(request, 'pluckedsite/tracts.html')

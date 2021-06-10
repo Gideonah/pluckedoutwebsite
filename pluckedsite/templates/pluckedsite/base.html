@@ -31,7 +31,14 @@
           <li class="active"><a href="{% url 'index' %}">Home</a></li>
           <li><a class="drop" href="#">Prophecy</a>
             <ul>
-              <li><a href="{% url 'construction' %}">Who is antichrist?</a></li>
+              <li><a href="{% url 'antichrist' %}">Pope is Antichrist series</a></li>
+              
+              <li><a class="drop">Daniel</a>
+
+              <ul>
+                <li><a href="{% url 'dreamofaking' %}">Dream of a king</a>
+              </ul>           
+              </li>
               <li><a href="{% url 'resources' %}">Prophecy resources</a>           
               </li>
             </ul>
@@ -71,7 +78,7 @@
           </li>
           <li><a class="drop" href="#">Documents</a>
           <ul>
-              
+              <li><a href="{% url 'tracts' %}">Tracts</a></li>
              
                 </ul></li>
           <li><a href="{% url 'meeting' %}">Join us</a></li>

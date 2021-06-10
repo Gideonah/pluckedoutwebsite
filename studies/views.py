@@ -46,3 +46,7 @@ def sbholy_view(request):
 def alone_view(request):
 
 	return render(request, 'studies/alone.html')
+
+def prophecy_daniel2_view(request):
+
+	return render(request, 'studies/dreamofaking.html')

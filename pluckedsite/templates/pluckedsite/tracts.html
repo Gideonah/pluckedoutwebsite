@@ -1,0 +1,64 @@
+{% extends "pluckedsite/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay light" style="background-image:url(https://bibletruths.s3.eu-west-2.amazonaws.com/images/construction.jpg);"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div class="fl_left"> 
+        <!-- ################################################################################################ -->
+        <ul class="nospace">
+       
+          <li><i class="fa fa-envelope-o"></i>Pocontact@pluckedout.co.uk</li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+      <div class="fl_right"> 
+        <!-- ################################################################################################ -->
+        <ul class="nospace">
+          <li><a class="faicon-youtube" href="https://www.youtube.com/channel/UC7rBhXHqiTS1aSU75DVevAQ?view_as=subscriber"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+      <!-- ################################################################################################ -->
+
+    </div>
+    <div id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    
+    <!-- ################################################################################################ -->
+  </div>
+
+  </div>
+  
+{% endblock %}
+
+{% block bodycontent %}
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body --> 
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+ <article class="one_third first"><img src="{% static 'pluckedsite/images/tracts/first_page_beast.png' %}" class="imgover btmspace-30" width="300" height="300">
+        <footer><p style="text-align: center;"><a href="{% static 'pluckedsite/images/tracts/Antichrist tract.pdf' %}" style="text-align: center">Antichrist tract</a></p></footer>
+      </article>
+
+       <article class="one_third "><img src="{% static 'pluckedsite/images/tracts/first page daniel.png' %}" class="imgover btmspace-30" width="300" height="300">
+        <footer><p style="text-align: center;"><a href="{% static 'pluckedsite/images/tracts/Daniel tract.pdf' %}" style="text-align: center">Daniel 8 tract</a></p></footer>
+      </article>
+     
+      
+
+
+     
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+
+{% endblock %}
