@@ -1,0 +1,137 @@
+{% extends "pluckedsite/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<!-- Top Background Image Wrapper -->
+ 
+
+<div class="bgded overlay light" style="background-image:url(https://bibletruths.s3.eu-west-2.amazonaws.com/images/bible.jpg); background-size: cover;"> 
+  
+   
+  <!-- ################################################################################################ -->
+  <div class="wrapper row0">
+
+    <div id="topbar" class="hoc clear"> 
+
+      <!-- ################################################################################################ -->
+      <div class="fl_left"> 
+
+        <!-- ################################################################################################ -->
+        <ul class="nospace">
+       
+          <li><i class="fa fa-envelope-o"></i>Pocontact@pluckedout.co.uk</li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+
+      <div class="fl_right"> 
+        <!-- ################################################################################################ -->
+        <ul class="nospace">
+          <li><a class="faicon-youtube" href="https://www.youtube.com/channel/UC7rBhXHqiTS1aSU75DVevAQ?view_as=subscriber"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+      <!-- ################################################################################################ -->
+<div id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    
+    <!-- ################################################################################################ -->
+  </div>
+    </div>
+
+   
+
+  </div>
+ 
+  
+
+{% endblock %}
+
+{% block bodycontent %}
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+     <h2 style="text-align: center;"><strong>Prophetic concordance</strong></h2>
+<!-- Button trigger modal -->
+<p style='text-align: center;'>&nbsp;</p>
+<p style='text-align: center;'>This symbol tool will allow you to get the prophetic definitions of different words throughout the bible. As we know <u>2 peter 1:20</u> &ldquo;knowing this first, that no prophecy of the scripture is of any private interpretation&rdquo;. We must compare the bible with the bible to understand what&rsquo;s being said especially in prophecy. This tool is powered by <a href="https://remnantofgod.org/books/docs/REV/Revelation.htm">https://remnantofgod.org/books/docs/REV/Revelation.htm</a> Which is a comprehensive study breaking down each symbol in revelation.</p>
+<p style='text-align: center;'>&nbsp;</p>
+<p style='text-align: center;'><em>Note: wherever one sees &ldquo;etc.&rdquo; this is due to there being so many other verses which use the symbol in that same manor. Plus, for words which are only used once, the use of the Strong&rsquo;s concordance along with the context of the verse helps to piece together it&rsquo;s meaning.</em></p>
+
+
+<form id="prophecy_form" style=" display: flex;
+   
+    justify-content: center;" method="POST">
+
+    {% csrf_token %}
+    <input type="text" id="name" name="name">
+ <input id="subimt" type="submit">
+</form>
+
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <h2></h2>
+   {% autoescape on %}
+   {% if list_var == False %}
+    <p style='text-align: center;'>&nbsp;</p>
+    <p style='text-align: center;'>Definition(s): </p>
+    <p id="testing" style='text-align: center;'>{{ definitions|safe|escape  }}</p>
+    <p style='text-align: center;'>&nbsp;</p>
+    <p style='text-align: center;'>Verses: </p>
+    <p style='text-align: center;'>{{ variable|safe|escape  }}</p>
+  {% else %}
+    <p style='text-align: center;'>&nbsp;</p>
+    <p style='text-align: center;'>The exact word is not the database but here are some suggestions:</p>
+    <p style='text-align: center;'>{{ variable|safe|escape  }}</p>
+  {% endif %}
+   
+       <div></div>
+   {% endautoescape %}
+
+   
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+<!--
+<script type="text/javascript">
+  $(document).on('submit', '#prophecy_form', function(e){
+
+    e.preventDefault();
+
+    $.ajax({
+        type:'POST',
+        url:'/symbolsearch/',
+        data:{
+          search:$('#name').val(),
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+
+        },
+        success:function (list_var){
+
+          document.getElementById("#testing").contentWindow.location.reload(true)
+
+
+        }
+
+    });
+  });
+</script>
+-->
+  </main>
+</div>
+
+{% endblock %}

@@ -38,6 +38,8 @@ urlpatterns = [
     path('keepingsabbath/', study_view.sbholy_view, name='keepingsabbath'),
     path('alone/', study_view.alone_view, name='alone'),
     path('dreamofaking/', study_view.prophecy_daniel2_view, name='dreamofaking'),
+    path('Melchizedek/', study_view.melchizedek_view, name='Melchizedek'),
     path('tracts/', pluckedsite_views.tracts_view, name='tracts'),
     path('antichrist/', pluckedsite_views.antichrist_view, name='antichrist'),
+    path('symbolsofrevelation/', study_view.symbolsearch_view, name='symbolsofrevelation'),
 ]

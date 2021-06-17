@@ -7,9 +7,11 @@
 <title>PluckedOut</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
 <link href="{% static 'pluckedsite/framework.css' %}" rel="stylesheet" type="text/css" media="all">
 <link href="{% static 'pluckedsite/layout.css' %}" rel="stylesheet" type="text/css" media="all">
-
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -39,8 +41,14 @@
                 <li><a href="{% url 'dreamofaking' %}">Dream of a king</a>
               </ul>           
               </li>
+              <li><a class="drop">Revelation</a>  
+               <ul>
+                <li><a href="{% url 'symbolsofrevelation' %}">Symbols tool</a>
+              </ul>          
+              </li>
               <li><a href="{% url 'resources' %}">Prophecy resources</a>           
               </li>
+
             </ul>
 
           </li>
@@ -70,6 +78,7 @@
            <li><a class="drop" href="#">Strong meat</a>
                 <ul>
                   <li><a href="{% url 'alone' %}">Are we alone?</a></li>
+                  <li><a href="{% url 'Melchizedek' %}">Who is Melchizedek?</a></li>
                
               </li>
               
