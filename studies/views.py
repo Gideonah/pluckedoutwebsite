@@ -57,6 +57,10 @@ def melchizedek_view(request):
 
 	return render(request, 'studies/Melchizedek.html')
 
+def dream_view(request):
+
+	return render(request, 'studies/dreams.html')
+
 def symbolsearch_view(request):
 	symbol_df = pd.read_csv("/home/pluckedout/pluckedoutwebsite/studies/symbols_database.csv")
 	symbol_df["symbol"] = symbol_df["symbol"].apply(lambda x: x.strip())
