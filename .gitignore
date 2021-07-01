@@ -2,4 +2,7 @@
 *.DS_store
 *.mp4
 *.mov
+*.csv
+*.png
+*.jpeg
 pluckedout/settings.py
