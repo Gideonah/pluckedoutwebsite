@@ -58,18 +58,18 @@ def melchizedek_view(request):
 	return render(request, 'studies/Melchizedek.html')
 
 def symbolsearch_view(request):
-	symbol_df = pd.read_csv("studies/symbols_database.csv")
+	symbol_df = pd.read_csv("/home/pluckedout/pluckedoutwebsite/studies/symbols_database.csv")
 	symbol_df["symbol"] = symbol_df["symbol"].apply(lambda x: x.strip())
 	list_var = False
 	variable = ''
 	definitions = ''
-	
-	
+
+
 	# if this is a POST request we need to process the form data
 	if request.method == 'POST':
 	# create a form instance and populate it with data from the request:
-		
-		# check whether it's valid:	
+
+		# check whether it's valid:
 		def get_verses(symbol_df, variable):
 			suggestions = False
 			definitions = None
@@ -92,25 +92,25 @@ def symbolsearch_view(request):
 				return (list_of_suggestions,definitions,"suggestions")
 			else:
 				return (verses,definitions,"verses")
-		
+
 		variable = request.POST['name']
-		
+
 		variable = variable.lower()
 		variable = get_verses(symbol_df, variable)
 		definitions = variable[1]
 		if variable[2]=="suggestions":
-			variable = "No scripture" if len(variable[0])==0 else variable[0]				
+			variable = "No scripture" if len(variable[0])==0 else variable[0]
 		else:
 			variable = variable[0]
-		
+
 		if type(variable) == list:
 			list_var = True
 			variable = ",".join(variable)
 		render(request, 'studies/symbolsearch.html',{'variable':variable, 'definitions':definitions, 'list_var': list_var})
 
 	# if a GET (or any other method) we'll create a blank form
-		
-		
+
+
 	return render(request, 'studies/symbolsearch.html',{'variable':variable, 'definitions':definitions, 'list_var': list_var})
 
 
